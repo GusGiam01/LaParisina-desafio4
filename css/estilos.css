@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'La Parisina';
+    src: url('../assets/Didot.otf');
+}
+
+/* Body */
+
+.body {
+    background-color: grey;
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+        "header"
+        "section"
+        "footer";
+    grid-template-rows: 4.5rem 1fr 2.5rem;
+
+}
+
+
+/* Header */
+
+header {
+    grid-area: header;
+}
+
+.nav {
+    display: grid;
+    grid-template-areas:
+        "ico catalogo carrito";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    margin: 0 auto;
+    align-items: center;
+    background-color: black;
+    height: 4.5rem;
+    font-family: 'La Parisina';
+}
+
+.nav__otrosVinculos {
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.nav__inicio {
+    grid-area: ico;
+    text-align: center;
+    font-size: 80%;
+}
+
+.nav_barraBusqueda {
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border: solid 2px gray;
+    height: 60%;
+    margin: 10px;
+}
+
+.nav__vinculo {
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    font-size: 80%;
+}
+
+.versionDesktop {
+    display: none;
+}
+
+/* Footer */
+
+.footer__nav {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    height: 2.5rem;
+    font-family: 'La Parisina';
+}
+
+.nav__vinculoFooter {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 80%;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* Clases de pagina "Index" */
+
+section#Index {
+    grid-area: section;
+}
+
+.section_nav {
+    display: grid;
+    grid-template-areas:
+        "img1"
+        "vinculo1"
+        "img2"
+        "vinculo2";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr 0.5fr;
+    justify-content: center;
+    align-items: center;
+}
+
+img#img1 {
+    grid-area: img1;
+}
+
+img#img2 {
+    grid-area: img2;
+}
+
+a#vinculo1 {
+    grid-area: vinculo1;
+}
+
+a#vinculo2 {
+    grid-area: vinculo2;
+}
+
+.navSection__img {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.section__index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Clases de pagina "Catalogo" */
+
+section#Catalogo {
+    grid-area: section;
+}
+
+.tab {
+    align-items: center;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.section__catalogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Clases de pagina "Contacto" */
+
+section#Contacto {
+    grid-area: section;
+}
+
+.form {
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.section__contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Clases de pagina "Carrito" */
+
+section#Carrito {
+    grid-area: section;
+}
+
+.section__carrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Clases de pagina "Ayuda" */
+
+section#Ayuda {
+    grid-area: section;
+}
+
+.iframe {
+    height: 280px;
+    width: 280px;
+}
+
+.section__ayuda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Clases Generales */
+
+.centrado {
+    text-align: center;
+}
+
+.vinculosGenerales {
+    text-decoration: none;
+}
+
+.textoVinculos {
+    text-align: center;
+    margin: 0 auto;
+    color: black;
+    display: block;
+    background-color: white;
+    border: 2px solid black;
+    width: fit-content;
+}
+
+.centrarOtros {
+    display: block;
+    margin: 0 auto;
+}
+
+
+@media screen and (min-width:768px) {
+
+    main {
+        display: grid;
+        height: 100vh;
+        grid-template-areas:
+            "header"
+            "section"
+            "footer";
+
+    }
+
+    /* Header */
+
+    header {
+        grid-area: header;
+    }
+
+    .versionDesktop {
+        display: inline;
+    }
+
+    .nav {
+        display: grid;
+        grid-template-areas:
+            "ico secciones";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        margin: 0 auto;
+
+        align-items: center;
+        background-color: black;
+        height: 4.5rem;
+        font-family: 'La Parisina';
+    }
+
+    .nav__otrosVinculos {
+        grid-area: secciones;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .nav__inicio {
+        grid-area: ico;
+        text-align: center;
+        font-size: 150%;
+    }
+
+    .nav_barraBusqueda {
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        border: solid 2px gray;
+        height: 60%;
+        margin: 10px;
+    }
+
+    .nav__vinculo {
+        color: white;
+        border: 2px solid white;
+        text-decoration: none;
+        font-size: 125%;
+    }
+
+
+
+    /* Footer */
+
+    .footer__nav {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+        height: 2.5rem;
+        font-family: 'La Parisina';
+    }
+
+    .nav__vinculoFooter {
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 100%;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    /* Clases de pagina "Index" */
+
+    section#Index {
+        grid-area: section;
+    }
+
+    .section_nav {
+        display: grid;
+        grid-template-areas:
+            "img1 img2"
+            "vinculo1 vinculo2";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img#img1 {
+        grid-area: img1;
+    }
+
+    img#img2 {
+        grid-area: img2;
+    }
+
+    a#vinculo1 {
+        grid-area: vinculo1;
+    }
+
+    a#vinculo2 {
+        grid-area: vinculo2;
+    }
+
+    .navSection__img {
+        width: 75%;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+
+    /* Clases de pagina "Catalogo" */
+
+    section#Catalogo {
+        grid-area: section;
+    }
+
+    .tab {
+        align-items: center;
+        background-color: white;
+        margin: 0 auto;
+    }
+
+    /* Clases de pagina "Contacto" */
+
+    section#Contacto {
+        grid-area: section;
+    }
+
+    .form {
+        display: grid;
+        grid-template-areas:
+            "titulo titulo"
+            "nombre apellido"
+            "email telefono"
+            "mensaje mensaje";
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 10px;
+        border: 2px solid white;
+    }
+
+    h3#Titulo {
+        grid-area: titulo;
+    }
+
+    div#Nombre {
+        grid-area: nombre;
+        justify-self: end;
+    }
+
+    div#Apellido {
+        grid-area: apellido;
+        justify-self: start;
+    }
+
+    div#Email {
+        grid-area: email;
+        justify-self: end;
+    }
+
+    div#Telefono {
+        grid-area: telefono;
+        justify-self: start;
+    }
+
+    div#Mensaje {
+        grid-area: mensaje;
+    }
+
+    /* Clases de pagina "Carrito" */
+
+    section#Carrito {
+        grid-area: section;
+    }
+
+    /* Clases de pagina "Ayuda" */
+
+    section#Ayuda {
+        grid-area: section;
+    }
+
+    .iframe {
+        height: 500px;
+        width: 500px;
+    }
+
+    /* Clases Generales */
+
+    .centrado {
+        text-align: center;
+    }
+
+    .vinculosGenerales {
+        text-decoration: none;
+    }
+
+    .textoVinculos {
+        text-align: center;
+        margin: 0 auto;
+        color: black;
+        display: block;
+        background-color: white;
+        border: 2px solid black;
+        width: fit-content;
+    }
+
+    .centrarOtros {
+        display: block;
+        margin: 0 auto;
+    }
+}

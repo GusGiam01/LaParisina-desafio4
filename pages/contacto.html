@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/eiffel.png">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>LA PARISINA</title>
+</head>
+
+
+<body class="body" style="font-family: La Parisina;">
+    <main>
+    <header class="header">
+        
+        <nav class="nav">
+            <div class="nav__inicio">
+                <a href="../index.html" class="nav__vinculo">La Parisina</a>
+            </div>
+
+            <div class="nav__otrosVinculos">
+                <a href="contacto.html" class="nav__vinculo versionDesktop">Contacto</a>
+                <a href="catalogo.html" class="nav__vinculo">Catalogo</a>
+                <a href="micarrito.html" class="nav__vinculo">Mi Carrito</a>
+                <a href="ayuda.html" class="nav__vinculo versionDesktop">Ayuda</a>
+        </div>
+
+        </nav>
+    </header>
+
+    <section id="Contacto" class="section__contacto">
+        <div>
+    <h2 class="centrado">
+        Contacto
+    </h2> 
+
+    
+    <form action="servidor.php" method="post" class="form">
+        <h3 id="Titulo">Cualquier consulta que tengas no dudes en preguntar!</h3>
+
+        <div id="Nombre">
+            <label for="nombre"><h4>Nombre*</h4></label>
+            <input type="text" name="nombre" placeholder="Ingresa tu nombre." required>
+        </div>
+        <div id="Apellido">
+            <label for="apellido"><h4>Apellido*</h4></label>
+            <input type="text" name="apellido" placeholder="Ingresa tu apellido." required>
+        </div>
+        <div id="Email">
+            <label for="email"><h4>Email*</h4></label>
+            <input type="email" name="email" placeholder="Ingresa tu email." required>
+        </div>
+        <div id="Telefono">
+            <label for="telefono"><h4>Telefono*</h4></label>
+            <input type="text" name="Telefono" placeholder="Ingresa tu telefono." required>
+        </div>
+        <div id="Mensaje">
+            <h4 id="comentario">Mensaje</h4>
+            <textarea name="comentario" id="comentario" cols="50" rows="10"></textarea><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar todo">
+        </div>
+    </form>
+    </div>
+    </section>
+
+    <footer>
+        <nav class="footer__nav">
+            <a class="nav__vinculoFooter" href="https://www.instagram.com/laparisinaatelier/?hl=es-la">Instagram</a>
+            <a class="nav__vinculoFooter" href="ayuda.html">Ayuda</a>
+            <a class="nav__vinculoFooter" href="contacto.html">Consultas</a>
+        </nav>
+    </footer>
+</main>
+</body>
+</html>
