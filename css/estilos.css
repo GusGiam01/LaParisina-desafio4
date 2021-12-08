@@ -265,12 +265,13 @@ section#Ayuda {
     .nav {
         display: grid;
         grid-template-areas:
-            "ico secciones";
-        grid-template-columns: 1fr 2fr;
+            "secciones ico carrito";
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         margin: 0 auto;
 
         align-items: center;
+        justify-content: center;
         background-color: black;
         height: 4.5rem;
         font-family: 'La Parisina';
@@ -304,7 +305,41 @@ section#Ayuda {
         font-size: 125%;
     }
 
+    .nav__vinculo--carrito {
+        grid-area: carrito;
+        border: none;
+    }
 
+    ul {
+        list-style: none;
+        display: flex;
+    }
+
+    ul li {
+        display: flex;
+    }
+
+    .nav li a {
+        background-color: black;
+    }
+
+    .nav li a:hover {
+        background-color: grey;
+    }
+
+    .nav li ul {
+        display: none;
+        position: absolute;
+        min-width: 140px;
+    }
+
+    .nav li:hover>ul {
+        display: block;
+    }
+
+    .versionMovil {
+        display: none;
+    }
 
     /* Footer */
 
